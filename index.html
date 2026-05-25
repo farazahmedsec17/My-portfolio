@@ -1,828 +1,890 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faraz Ahmed | Cybersecurity & SOC Analyst Portfolio</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --bg-dark: #080b10;
-            --bg-card: #111622;
-            --bg-nav: rgba(8, 11, 16, 0.85);
-            --accent: #00f2fe;
-            --accent-dim: rgba(0, 242, 254, 0.1);
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --border-color: rgba(255, 255, 255, 0.05);
-            --font-sans: 'Plus Jakarta Sans', sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faraz Ahmed | Cybersecurity Analyst</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+  <meta name="description" content="Faraz Ahmed - Cybersecurity Analyst specializing in SOC Operations, Threat Detection, Cloud Security, SIEM, Splunk, Microsoft Sentinel, DevSecOps, and Incident Response."/>
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: var(--font-sans);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        /* Layout & Shared Styles */
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+  <style>
 
-        section {
-            padding: 6rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
 
-        .section-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 3rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#050816;
+      color:#ffffff;
+      overflow-x:hidden;
+    }
 
-        .section-title span {
-            color: var(--accent);
-            font-family: var(--font-mono);
-            font-size: 1.1rem;
-            font-weight: 400;
-        }
+    body::before{
+      content:"";
+      position:fixed;
+      width:100%;
+      height:100%;
+      background:
+      radial-gradient(circle at top right, rgba(0,255,255,0.08), transparent 20%),
+      radial-gradient(circle at bottom left, rgba(139,92,246,0.08), transparent 25%);
+      z-index:-1;
+    }
 
-        /* Navigation */
-        nav {
-            background: var(--bg-nav);
-            backdrop-filter: blur(12px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 2rem;
-            max-width: 1140px;
-            margin: 0 auto;
-        }
+    .container{
+      width:90%;
+      max-width:1250px;
+      margin:auto;
+    }
 
-        .logo {
-            font-family: var(--font-mono);
-            font-weight: 700;
-            font-size: 1.2rem;
-            text-decoration: none;
-            color: var(--text-main);
-            letter-spacing: -1px;
-        }
+    section{
+      padding:100px 0;
+    }
 
-        .logo span {
-            color: var(--accent);
-        }
+    /* NAVBAR */
 
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-        }
+    nav{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(10px);
+      background:rgba(5,8,22,0.88);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
 
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+    .nav-container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 0;
+    }
 
-        .nav-links a:hover {
-            color: var(--accent);
-        }
+    .logo{
+      font-size:28px;
+      font-weight:800;
+      color:#00e5ff;
+    }
 
-        /* Hero Section */
-        header {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 100px;
-        }
+    .nav-links{
+      display:flex;
+      gap:28px;
+    }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.25fr 0.75fr;
-            gap: 4rem;
-            align-items: center;
-        }
+    .nav-links a{
+      font-size:15px;
+      transition:0.3s;
+      position:relative;
+    }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--accent-dim);
-            color: var(--accent);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-family: var(--font-mono);
-            margin-bottom: 1.5rem;
-            border: 1px solid rgba(0, 242, 254, 0.2);
-        }
+    .nav-links a:hover{
+      color:#00e5ff;
+    }
 
-        .hero-text h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -1.5px;
-            margin-bottom: 0.5rem;
-        }
+    /* HERO */
 
-        .hero-text h2 {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-        }
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      padding-top:120px;
+    }
 
-        .profile-summary {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-            text-align: justify;
-        }
+    .hero-wrapper{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
 
-        .meta-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
+    .hero-text h3{
+      color:#00e5ff;
+      margin-bottom:15px;
+      font-size:20px;
+      font-weight:600;
+    }
 
-        .meta-info span {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+    .hero-text h1{
+      font-size:64px;
+      line-height:1.1;
+      margin-bottom:25px;
+      font-weight:800;
+    }
 
-        .meta-info i {
-            color: var(--accent);
-        }
+    .typing{
+      color:#00e5ff;
+    }
 
-        .cta-group {
-            display: flex;
-            gap: 1.5rem;
-        }
+    .hero-text p{
+      color:#cbd5e1;
+      line-height:1.9;
+      margin-bottom:35px;
+      font-size:16px;
+    }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.8rem 2rem;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.2s;
-            cursor: pointer;
-        }
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
 
-        .btn-primary {
-            background: var(--accent);
-            color: var(--bg-dark);
-            border: 1px solid var(--accent);
-        }
+    .btn{
+      padding:15px 28px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
 
-        .btn-primary:hover {
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.4);
-            transform: translateY(-2px);
-        }
+    .primary-btn{
+      background:#00e5ff;
+      color:#000;
+    }
 
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-        }
+    .primary-btn:hover{
+      transform:translateY(-3px);
+      background:#00c4dc;
+    }
 
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.03);
-            border-color: var(--text-muted);
-        }
+    .secondary-btn{
+      border:1px solid rgba(255,255,255,0.15);
+    }
 
-        /* Image Frame */
-        .hero-image {
-            display: flex;
-            justify-content: center;
-        }
+    .secondary-btn:hover{
+      border-color:#00e5ff;
+      color:#00e5ff;
+    }
 
-        .image-frame {
-            width: 300px;
-            height: 360px;
-            border-radius: 12px;
-            position: relative;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-        }
+    .hero-image{
+      text-align:center;
+    }
 
-        .image-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 11px;
-        }
+    .hero-image img{
+      width:420px;
+      max-width:100%;
+      border-radius:28px;
+      border:3px solid rgba(255,255,255,0.08);
+      box-shadow:0 0 35px rgba(0,229,255,0.25);
+    }
 
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-        }
+    /* BADGES */
 
-        .skills-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            border-radius: 8px;
-        }
+    .badges{
+      margin-top:30px;
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
 
-        .skills-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
-            color: var(--accent);
-            font-family: var(--font-mono);
-        }
+    .badge{
+      background:#111827;
+      padding:12px 18px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.08);
+      font-size:14px;
+    }
 
-        .skills-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
+    /* SECTION TITLES */
 
-        /* Experience & Projects Architecture */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-        }
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
 
-        .timeline-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 2.5rem;
-            border-radius: 8px;
-            position: relative;
-        }
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:12px;
+      font-weight:800;
+    }
 
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
+    .section-title p{
+      color:#94a3b8;
+    }
 
-        .role-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-        }
+    /* GLASS CARD */
 
-        .company-meta {
-            font-size: 0.95rem;
-            color: var(--accent);
-            font-family: var(--font-mono);
-            margin-top: 0.25rem;
-        }
+    .glass-card{
+      background:rgba(17,24,39,0.75);
+      border:1px solid rgba(255,255,255,0.06);
+      backdrop-filter:blur(12px);
+      border-radius:22px;
+      padding:35px;
+      transition:0.35s;
+    }
 
-        .timeline-date {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            background: rgba(255, 255, 255, 0.03);
-            padding: 0.3rem 0.75rem;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-        }
+    .glass-card:hover{
+      transform:translateY(-8px);
+      border-color:#00e5ff;
+    }
 
-        .work-bullets {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:28px;
+    }
 
-        .work-bullets li {
-            position: relative;
-            padding-left: 1.5rem;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            text-align: justify;
-        }
+    .glass-card h3{
+      color:#00e5ff;
+      margin-bottom:16px;
+      font-size:22px;
+    }
 
-        .work-bullets li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-        }
+    .glass-card p,
+    .glass-card li{
+      color:#cbd5e1;
+      line-height:1.9;
+      font-size:15px;
+    }
 
-        .project-link {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--accent);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            margin-top: 0.5rem;
-        }
+    ul{
+      padding-left:18px;
+    }
 
-        .project-link:hover {
-            text-decoration: underline;
-        }
+    /* TIMELINE */
 
-        /* Grid for Education & Certifications */
-        .edu-cert-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
+    .timeline{
+      position:relative;
+      max-width:1000px;
+      margin:auto;
+    }
 
-        .edu-item, .cert-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-        }
+    .timeline::after{
+      content:'';
+      position:absolute;
+      width:3px;
+      background:#00e5ff;
+      top:0;
+      bottom:0;
+      left:50%;
+      margin-left:-1px;
+    }
 
-        .edu-item h4 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-        }
+    .timeline-item{
+      padding:20px 40px;
+      position:relative;
+      width:50%;
+    }
 
-        .edu-sub, .cert-sub {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 0.75rem;
-        }
+    .timeline-item::after{
+      content:'';
+      position:absolute;
+      width:20px;
+      height:20px;
+      right:-10px;
+      background:#00e5ff;
+      border-radius:50%;
+      top:40px;
+    }
 
-        .cert-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+    .left{
+      left:0;
+    }
 
-        .cert-card-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.02);
-            padding: 1rem;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-        }
+    .right{
+      left:50%;
+    }
 
-        .cert-name {
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
+    .right::after{
+      left:-10px;
+    }
 
-        .cert-date {
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            color: var(--accent);
-        }
+    .timeline-content{
+      background:#111827;
+      padding:30px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,0.05);
+    }
 
-        /* Contact / Footer */
-        footer {
-            padding: 5rem 0;
-            background: #05070a;
-            text-align: center;
-        }
+    .timeline-content h3{
+      color:#00e5ff;
+      margin-bottom:10px;
+    }
 
-        .footer-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
+    .timeline-content span{
+      color:#94a3b8;
+      font-size:14px;
+    }
 
-        .footer-pitch {
-            color: var(--text-muted);
-            max-width: 500px;
-            margin: 0 auto 2.5rem auto;
-        }
+    /* SKILLS */
 
-        .footer-channels {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+      justify-content:center;
+    }
 
-        .channel-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-main);
-            text-decoration: none;
-            font-size: 0.95rem;
-            background: var(--bg-card);
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-            transition: border-color 0.2s;
-        }
+    .skill{
+      background:#111827;
+      padding:14px 18px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.08);
+      transition:0.3s;
+    }
 
-        .channel-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
+    .skill:hover{
+      border-color:#00e5ff;
+      transform:translateY(-3px);
+    }
 
-        .copyright {
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
+    /* CONTACT */
 
-        /* Responsive Layouts */
-        @media (max-width: 968px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-            .hero-image {
-                order: -1;
-            }
-            .meta-info, .cta-group {
-                justify-content: center;
-            }
-            .edu-cert-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            .timeline-header {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+    .contact-box{
+      text-align:center;
+      background:#111827;
+      padding:60px;
+      border-radius:30px;
+      border:1px solid rgba(255,255,255,0.06);
+    }
+
+    .contact-links{
+      display:flex;
+      gap:20px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:35px;
+    }
+
+    .contact-links a{
+      padding:15px 24px;
+      border-radius:12px;
+      background:#0f172a;
+      border:1px solid rgba(255,255,255,0.08);
+      transition:0.3s;
+    }
+
+    .contact-links a:hover{
+      background:#00e5ff;
+      color:#000;
+    }
+
+    footer{
+      padding:35px 0;
+      text-align:center;
+      color:#94a3b8;
+      border-top:1px solid rgba(255,255,255,0.06);
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:950px){
+
+      .hero-wrapper{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:46px;
+      }
+
+      .hero-buttons{
+        justify-content:center;
+      }
+
+      .badges{
+        justify-content:center;
+      }
+
+      .timeline::after{
+        left:20px;
+      }
+
+      .timeline-item{
+        width:100%;
+        padding-left:70px;
+        padding-right:25px;
+      }
+
+      .timeline-item::after{
+        left:10px;
+      }
+
+      .right{
+        left:0;
+      }
+
+      .nav-links{
+        display:none;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">FARAZ<span>.</span>SEC</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education & Certs</a>
-                <a href="#contact">Contact</a>
-            </div>
+  <!-- NAVBAR -->
+
+  <nav>
+    <div class="container nav-container">
+
+      <div class="logo">
+        Faraz Ahmed
+      </div>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-wrapper">
+
+      <div class="hero-text">
+
+        <h3>Cybersecurity Analyst | SOC Analyst</h3>
+
+        <h1>
+          Defending Digital Infrastructure with
+          <span class="typing">Threat Intelligence & Security Operations</span>
+        </h1>
+
+        <p>
+          Results-driven Cybersecurity Analyst pursuing M.S. in Cybersecurity at SUNY Buffalo
+          with hands-on expertise in SOC operations, incident response, threat detection,
+          vulnerability management, SIEM engineering, cloud security, DevSecOps,
+          and Zero Trust Architecture across enterprise and cloud environments.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="Faraz_Ahmed_Resume.pdf" download class="btn primary-btn">
+            Download Resume
+          </a>
+
+          <a href="#contact" class="btn secondary-btn">
+            Contact Me
+          </a>
+
         </div>
-    </nav>
 
-    <!-- Hero / About Section -->
-    <header id="about">
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <div class="hero-badge">
-                        <i class="fa-solid fa-shield-halved"></i> Security Operations Center
-                    </div>
-                    <h1>Faraz Ahmed</h1>
-                    <h2>Cybersecurity Analyst | SOC Analyst</h2>
-                    
-                    <p class="profile-summary">
-                        Results-driven Cybersecurity Analyst with hands-on experience in SOC operations, threat detection, incident response, and vulnerability management across cloud and enterprise environments. Proven track record hardening 20+ systems, leading real-time log monitoring via Splunk (SPL) and Microsoft Sentinel (KQL), and mapping threats to the MITRE ATT&CK framework. Experienced with NIST 800-53, ISO/IEC 27001, and CIS Benchmarks — with demonstrated success reducing network vulnerability surface by 40% and sustaining 99.9% infrastructure uptime.
-                    </p>
+        <div class="badges">
 
-                    <div class="meta-info">
-                        <span><i class="fa-solid fa-location-dot"></i> Jericho, NY (Open to Relocation)</span>
-                        <span><i class="fa-solid fa-envelope"></i> farazahmedsec17@gmail.com</span>
-                        <span><i class="fa-solid fa-phone"></i> (716)-573-3902</span>
-                    </div>
+          <div class="badge">Open To Relocation</div>
+          <div class="badge">CompTIA CySA+</div>
+          <div class="badge">Security+</div>
+          <div class="badge">SOC Operations</div>
+          <div class="badge">Cloud Security</div>
 
-                    <div class="cta-group">
-                        <!-- Make sure your PDF file is named exactly 'Faraz_Ahmed_Resume.pdf' in the root directory -->
-                        <a href="Faraz_Ahmed_Resume.pdf" download="Faraz_Ahmed_Resume.pdf" class="btn btn-primary">
-                            <i class="fa-solid fa-arrow-down-to-line"></i> Download Resume
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                    </div>
-                </div>
-
-                <div class="hero-image">
-                    <div class="image-frame">
-                        <!-- Replace 'profile.jpg' with your photo path -->
-                        <img src="profile.jpg" alt="Faraz Ahmed Portrait Picture">
-                    </div>
-                </div>
-            </div>
         </div>
-    </header>
 
-    <!-- Technical Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title"><span>01.//</span> Technical Skills Matrix</h2>
-            <div class="skills-grid">
-                
-                <div class="skills-card">
-                    <h3>Security Operations</h3>
-                    <ul class="skills-list">
-                        <li>Real-time Network Monitoring</li>
-                        <li>Incident Response (NIST 800-61)</li>
-                        <li>Splunk (SPL) & MS Sentinel (KQL)</li>
-                        <li>LogRhythm Engine</li>
-                        <li>MITRE ATT&CK Mapping</li>
-                        <li>Malware Analysis (Static/Dynamic)</li>
-                        <li>YARA Rules & Signatures</li>
-                    </ul>
-                </div>
+      </div>
 
-                <div class="skills-card">
-                    <h3>Cloud & Platforms</h3>
-                    <ul class="skills-list">
-                        <li>AWS (IAM, CloudWatch)</li>
-                        <li>Azure Security & GCP Architecture</li>
-                        <li>Active Directory & GPO Management</li>
-                        <li>EDR/XDR (CrowdStrike, Defender)</li>
-                        <li>Zero Trust Architecture & RBAC</li>
-                        <li>Windows & Linux Hardening</li>
-                        <li>MS Office 365 Security</li>
-                    </ul>
-                </div>
+      <div class="hero-image">
+        <img src="Gemini_Generated_Image_bsvo99bsvo99bsvo.png" alt="Faraz Ahmed">
+      </div>
 
-                <div class="skills-card">
-                    <h3>Automation & Infra</h3>
-                    <ul class="skills-list">
-                        <li>Python, PowerShell, Bash</li>
-                        <li>Ansible & Terraform (IaC)</li>
-                        <li>DevSecOps (Jenkins / Actions)</li>
-                        <li>CI/CD Implementation</li>
-                        <li>Docker Containerization</li>
-                        <li>TCP/IP, Traffic & Port Analysis</li>
-                        <li>JSON, YAML, Git Architecture</li>
-                    </ul>
-                </div>
+    </div>
 
-                <div class="skills-card">
-                    <h3>Frameworks & Tools</h3>
-                    <ul class="skills-list">
-                        <li>NIST 800-53, CSF & ISO 27001</li>
-                        <li>CIS Benchmarks & HIPAA</li>
-                        <li>Prowler, Nessus & Burp Suite</li>
-                        <li>Nmap, Wireshark, Metasploit</li>
-                        <li>Jira & ServiceNow ITSM</li>
-                        <li>OWASP Top 10 Standards</li>
-                        <li>Secure SDLC Lifecycle</li>
-                    </ul>
-                </div>
+  </section>
 
-            </div>
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Professional Summary</h2>
+        <p>Cybersecurity Professional with strong SOC, SIEM, and Cloud Security expertise.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="glass-card">
+          <h3>SOC Operations & Incident Response</h3>
+
+          <p>
+            Experienced monitoring and triaging 50+ daily security alerts using Splunk,
+            Microsoft Sentinel, CrowdStrike, and Defender EDR/XDR while performing
+            incident response, IOC extraction, forensic analysis, and MITRE ATT&CK mapping.
+          </p>
         </div>
-    </section>
 
-    <!-- Professional Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title"><span>02.//</span> Professional Timeline</h2>
-            <div class="timeline">
+        <div class="glass-card">
+          <h3>Cloud & Infrastructure Security</h3>
 
-                <!-- Job 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="role-title">Security Operations Center Analyst</h3>
-                            <div class="company-meta">CybrBee | Jericho, NY</div>
-                        </div>
-                        <span class="timeline-date">Mar 2026 – Present</span>
-                    </div>
-                    <ul class="work-bullets">
-                        <li>Monitored and triaged 50+ daily security alerts across SIEM dashboards, classifying incidents by severity and escalating confirmed threats, maintaining 95%+ SLA compliance and reducing false positives by 30% through alert tuning.</li>
-                        <li>Conducted end-to-end incident response for phishing, malware, and unauthorized access events following NIST 800-61 playbooks — performing IOC extraction, threat containment, and producing 100% audit-compliant documentation in ServiceNow/Jira.</li>
-                        <li>Performed MITRE ATT&CK-mapped log analysis across endpoint, network, and cloud telemetry using Splunk and Microsoft Sentinel, identifying credential misuse, lateral movement, and anomalous login patterns — accelerating MTTD by 25%.</li>
-                        <li>Investigated endpoint alerts using CrowdStrike and Microsoft Defender EDR/XDR; authored SOC runbooks and IR playbooks aligned with CIS Controls and NIST CSF, contributing to a 20% reduction in MTTR for recurring threat categories.</li>
-                    </ul>
-                </div>
-
-                <!-- Job 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="role-title">White Team – UBNetDef</h3>
-                            <div class="company-meta">University at Buffalo | Buffalo, NY</div>
-                        </div>
-                        <span class="timeline-date">Sep 2024 – Jan 2025</span>
-                    </div>
-                    <ul class="work-bullets">
-                        <li>Hardened 20+ Windows and Linux endpoints by deploying 30+ firewall rules, enforcing CIS Benchmark-aligned GPOs, and implementing least-privilege RBAC — reducing the network attack surface by 40% with zero successful lateral movement during live red team engagements.</li>
-                        <li>Led SOC operations for 10 analysts directing MITRE ATT&CK-mapped threat hunting across network and endpoint telemetry; triaged 40+ security events with MTTR under 15 minutes, sustaining 99.9% infrastructure uptime under active adversarial conditions.</li>
-                        <li>Deployed and tuned IDS/IPS rules and network segmentation policies blocking 100% of simulated intrusion attempts across 5+ attack vectors; authored 10+ SOPs and runbooks for endpoint hardening, AD administration, and PAM.</li>
-                    </ul>
-                </div>
-
-                <!-- Job 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="role-title">Security Software Developer</h3>
-                            <div class="company-meta">Suven Consultants and Technology Pvt. Ltd | Mumbai, India</div>
-                        </div>
-                        <span class="timeline-date">Oct 2022 – Feb 2023</span>
-                    </div>
-                    <ul class="work-bullets">
-                        <li>Integrated SAST/DAST tools into CI/CD pipelines across 3+ applications enforcing OWASP Top 10 controls within the Secure SDLC, reducing vulnerability introduction rate by 35% and ensuring 100% compliance pre-deployment.</li>
-                        <li>Conducted security code reviews across 10,000+ lines of code identifying and remediating 15+ critical CVEs; executed end-to-end vulnerability management lifecycle achieving 100% closure of high-risk findings with audit-ready ATO documentation.</li>
-                        <li>Performed threat modeling using STRIDE methodology for 3+ enterprise applications and developed ISO/IEC 27001 and CIS Benchmark-aligned SOPs driving a shift-left DevSecOps culture across cross-functional engineering teams.</li>
-                    </ul>
-                </div>
-
-            </div>
+          <p>
+            Hands-on expertise securing AWS, Azure, and GCP environments with Zero Trust
+            Architecture, IAM hardening, RBAC, network segmentation, IDS/IPS deployment,
+            and CIS Benchmark-aligned system hardening.
+          </p>
         </div>
-    </section>
 
-    <!-- Engineering Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title"><span>03.//</span> Validated Technical Projects</h2>
-            <div class="timeline">
+        <div class="glass-card">
+          <h3>DevSecOps & Threat Engineering</h3>
 
-                <!-- Project 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="role-title">ICS/OT GCP Security Simulation</h3>
-                            <a href="#" class="project-link"><i class="fa-solid fa-link"></i> Repository / Project Link</a>
-                        </div>
-                        <span class="timeline-date">Nov 2024 – May 2025</span>
-                    </div>
-                    <ul class="work-bullets">
-                        <li>Designed a multi-zone ICS/OT security lab on GCP using Terraform, implementing the Purdue Model with 3 isolated VPCs, deny-by-default firewall policies, and Zero Trust segmentation across enterprise, DMZ, and control zones.</li>
-                        <li>Deployed Suricata IDS with custom OT detection rules for Modbus TCP traffic; executed red team scenarios (port scanning, pivot attacks, Modbus FC6 writes) validating detection across all 5 vectors via GCP VPC Flow Logs.</li>
-                        <li>Aligned architecture with NIST SP 800-82 and IEC 62443, documenting security controls and remediation strategies that improved threat detection rates by 25%.</li>
-                    </ul>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="role-title">MITRE SOC Automation & Infrastructure Monitoring</h3>
-                            <a href="#" class="project-link"><i class="fa-solid fa-link"></i> Repository / Project Link</a>
-                        </div>
-                        <span class="timeline-date">Mar 2025 – May 2025</span>
-                    </div>
-                    <ul class="work-bullets">
-                        <li>Architected a SOC-in-a-Box using Wazuh SIEM/XDR, TheHive, Cortex, and Shuffle SOAR containerized via Docker Compose; developed 50+ MITRE ATT&CK-mapped detection rules achieving 80–100% technique coverage across Windows and Linux endpoints.</li>
-                        <li>Integrated MISP threat intelligence (50,000+ IOCs) and executed full adversary emulation via MITRE Caldera simulating APT kill chains including ransomware, Mimikatz, and PsExec lateral movement — validating detection end-to-end.</li>
-                        <li>Automated IR playbooks via Shuffle SOAR, reducing mean time to triage and cutting false positive escalations by 40%.</li>
-                    </ul>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div>
-                            <h3 class="role-title">Splunk Root Threat Investigation</h3>
-                            <a href="#" class="project-link"><i class="fa-solid fa-link"></i> Repository / Project Link</a>
-                        </div>
-                        <span class="timeline-date">Mar 2025 – May 2025</span>
-                    </div>
-                    <ul class="work-bullets">
-                        <li>Conducted Splunk SIEM forensic investigation across 64,300+ log events from 10 data sources (DNS, VPN, MFA, Cloud, Password Vault) reconstructing a complete multi-stage breach timeline spanning phishing, MFA bypass, and privilege escalation.</li>
-                        <li>Engineered 20+ custom SPL queries for IOC correlation, brute force detection, and geolocation analysis — mapping 100% of attacker TTPs to MITRE ATT&CK and building 3 Splunk dashboards for SOC analyst and executive audiences.</li>
-                    </ul>
-                </div>
-
-            </div>
+          <p>
+            Skilled in Python, PowerShell, Bash, Terraform, Docker, Jenkins, GitHub Actions,
+            SAST/DAST integrations, vulnerability management, secure SDLC implementation,
+            and automated threat detection engineering.
+          </p>
         </div>
-    </section>
 
-    <!-- Education and Certifications Section -->
-    <section id="education">
-        <div class="container">
-            <div class="edu-cert-grid">
-                
-                <!-- Education Track -->
-                <div>
-                    <h2 class="section-title"><span>04.//</span> Education</h2>
-                    
-                    <div class="edu-item">
-                        <h4>M.S. Cybersecurity</h4>
-                        <div class="edu-sub">Advanced Certificate in Cybersecurity</div>
-                        <div class="timeline-date">Aug 2024 – Dec 2025</div>
-                        <div style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted)">The State University of New York at Buffalo | Buffalo, NY</div>
-                    </div>
+      </div>
 
-                    <div class="edu-item">
-                        <h4>Bachelor of Engineering</h4>
-                        <div class="edu-sub">Computer Science</div>
-                        <div class="timeline-date">Aug 2019 – Jul 2023</div>
-                        <div style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted)">University of Mumbai | Mumbai, India</div>
-                    </div>
-                </div>
+    </div>
 
-                <!-- Industry Certifications Track -->
-                <div>
-                    <h2 class="section-title"><span>05.//</span> Credentials</h2>
-                    <div class="cert-list">
-                        
-                        <div class="cert-card-item">
-                            <span class="cert-name">CompTIA CySA+</span>
-                            <span class="cert-date">Sept 2025</span>
-                        </div>
+  </section>
 
-                        <div class="cert-card-item">
-                            <span class="cert-name">CompTIA Security Analytics Professional (CSAP)</span>
-                            <span class="cert-date">Sept 2025</span>
-                        </div>
+  <!-- EXPERIENCE -->
 
-                        <div class="cert-card-item">
-                            <span class="cert-name">CompTIA Security+</span>
-                            <span class="cert-date">Aug 2025</span>
-                        </div>
+  <section id="experience">
 
-                        <div class="cert-card-item">
-                            <span class="cert-name">AWS Academy Cloud Security Foundations (Platinum)</span>
-                            <span class="cert-date">May 2025</span>
-                        </div>
+    <div class="container">
 
-                        <div class="cert-card-item">
-                            <span class="cert-name">Coursera – Foundations of Cybersecurity</span>
-                            <span class="cert-date">Jun 2021</span>
-                        </div>
+      <div class="section-title">
+        <h2>Professional Experience</h2>
+        <p>Real-world cybersecurity operations and infrastructure defense experience.</p>
+      </div>
 
-                        <div class="cert-card-item" style="opacity: 0.7;">
-                            <span class="cert-name"><i class="fa-solid fa-spinner fa-spin" style="color: var(--accent); margin-right: 5px;"></i> CCNA</span>
-                            <span class="cert-date">In Progress</span>
-                        </div>
+      <div class="timeline">
 
-                    </div>
-                </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
 
-            </div>
+            <h3>Security Operations Center Analyst</h3>
+            <span>CybrBee | Jericho, NY | Mar 2026 – Present</span>
+
+            <ul>
+              <li>Monitored and triaged 50+ daily security alerts across SIEM dashboards.</li>
+              <li>Maintained 95%+ SLA compliance while reducing false positives by 30%.</li>
+              <li>Performed incident response for phishing, malware, and unauthorized access events.</li>
+              <li>Conducted MITRE ATT&CK mapped log analysis using Splunk and Microsoft Sentinel.</li>
+              <li>Accelerated Mean Time to Detect (MTTD) by 25%.</li>
+              <li>Authored SOC runbooks and IR playbooks aligned with CIS Controls and NIST CSF.</li>
+
+            </ul>
+
+          </div>
         </div>
-    </section>
 
-    <!-- Contact Framework Section -->
-    <footer id="contact">
-        <div class="container">
-            <h2 class="footer-title">Secure a Connection</h2>
-            <p class="footer-pitch">Seeking an impactful SOC or Cybersecurity Analyst opportunity. Let's discuss how my defensive security and automation background can defend your architecture.</p>
-            
-            <div class="footer-channels">
-                <a href="mailto:farazahmedsec17@gmail.com" class="channel-btn">
-                    <i class="fa-regular fa-envelope"></i> Email Me
-                </a>
-                <a href="tel:7165733902" class="channel-btn">
-                    <i class="fa-solid fa-phone"></i> (716)-573-3902
-                </a>
-                <a href="http://linkedin.com/in/faraz-ahmed-5670931a7/" target="_blank" class="channel-btn">
-                    <i class="fa-brands fa-linkedin-in"></i> LinkedIn
-                </a>
-                <a href="http://github.com/TrexterX17" target="_blank" class="channel-btn">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
-            </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
 
-            <p class="copyright">&copy; 2026 Faraz Ahmed. Built for high availability.</p>
+            <h3>White Team – UBNetDef</h3>
+            <span>University at Buffalo | Sep 2024 – Jan 2025</span>
+
+            <ul>
+              <li>Hardened 20+ Windows and Linux systems using CIS-aligned GPOs and RBAC.</li>
+              <li>Reduced attack surface by 40% with zero successful lateral movement.</li>
+              <li>Led SOC operations for 10 analysts during live red team engagements.</li>
+              <li>Maintained 99.9% infrastructure uptime under active adversarial conditions.</li>
+              <li>Deployed IDS/IPS rules blocking 100% simulated intrusion attempts.</li>
+
+            </ul>
+
+          </div>
         </div>
-    </footer>
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+
+            <h3>Security Software Developer</h3>
+            <span>Suven Consultants & Technology Pvt. Ltd | Mumbai, India | Oct 2022 – Feb 2023</span>
+
+            <ul>
+              <li>Integrated SAST/DAST tools into CI/CD pipelines for 3+ applications.</li>
+              <li>Reduced vulnerability introduction rate by 35%.</li>
+              <li>Conducted code reviews across 10,000+ lines of code.</li>
+              <li>Remediated 15+ critical CVEs with 100% closure of high-risk findings.</li>
+              <li>Performed STRIDE threat modeling and secure SDLC implementation.</li>
+
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Featured Cybersecurity Projects</h2>
+        <p>Advanced security engineering, SOC automation, and threat simulation projects.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="glass-card">
+
+          <h3>ICS/OT GCP Security Simulation</h3>
+
+          <ul>
+            <li>Designed multi-zone ICS/OT security lab on GCP using Terraform.</li>
+            <li>Implemented Purdue Model segmentation across 3 isolated VPCs.</li>
+            <li>Configured deny-by-default firewall policies and Zero Trust segmentation.</li>
+            <li>Deployed Suricata IDS with custom OT detection rules.</li>
+            <li>Validated detection against port scanning, pivot attacks, and Modbus attacks.</li>
+            <li>Aligned architecture with NIST SP 800-82 and IEC 62443.</li>
+          </ul>
+
+        </div>
+
+        <div class="glass-card">
+
+          <h3>MITRE SOC Automation & Infrastructure Monitoring</h3>
+
+          <ul>
+            <li>Built SOC-in-a-Box using Wazuh, TheHive, Cortex, Shuffle SOAR, and Docker.</li>
+            <li>Developed 50+ MITRE ATT&CK mapped detection rules.</li>
+            <li>Integrated MISP Threat Intelligence with 50,000+ IOCs.</li>
+            <li>Executed full adversary emulation using MITRE Caldera.</li>
+            <li>Automated IR playbooks reducing false positive escalations by 40%.</li>
+          </ul>
+
+        </div>
+
+        <div class="glass-card">
+
+          <h3>Splunk Root Threat Investigation</h3>
+
+          <ul>
+            <li>Investigated 64,300+ log events from 10 security data sources.</li>
+            <li>Reconstructed complete multi-stage breach timelines.</li>
+            <li>Engineered 20+ custom SPL detection queries.</li>
+            <li>Mapped 100% attacker TTPs to MITRE ATT&CK.</li>
+            <li>Built executive and analyst-focused SOC dashboards.</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Technical Skills</h2>
+        <p>Security technologies, cloud platforms, frameworks, and tools.</p>
+      </div>
+
+      <div class="skills">
+
+        <div class="skill">Python</div>
+        <div class="skill">PowerShell</div>
+        <div class="skill">Bash</div>
+        <div class="skill">Ansible</div>
+        <div class="skill">Terraform</div>
+        <div class="skill">GitHub Actions</div>
+        <div class="skill">Jenkins</div>
+        <div class="skill">Splunk (SPL)</div>
+        <div class="skill">Microsoft Sentinel (KQL)</div>
+        <div class="skill">LogRhythm</div>
+        <div class="skill">CrowdStrike</div>
+        <div class="skill">Microsoft Defender</div>
+        <div class="skill">MITRE ATT&CK</div>
+        <div class="skill">NIST 800-53</div>
+        <div class="skill">ISO/IEC 27001</div>
+        <div class="skill">CIS Benchmarks</div>
+        <div class="skill">AWS Security</div>
+        <div class="skill">Azure Security</div>
+        <div class="skill">GCP</div>
+        <div class="skill">Zero Trust Architecture</div>
+        <div class="skill">Active Directory</div>
+        <div class="skill">RBAC</div>
+        <div class="skill">Vulnerability Management</div>
+        <div class="skill">Wireshark</div>
+        <div class="skill">Nessus</div>
+        <div class="skill">Nmap</div>
+        <div class="skill">Metasploit</div>
+        <div class="skill">Burp Suite</div>
+        <div class="skill">OWASP Top 10</div>
+        <div class="skill">Docker</div>
+        <div class="skill">Network Traffic Analysis</div>
+        <div class="skill">YARA Rules</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+
+  <section id="education">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Education</h2>
+        <p>Academic background in cybersecurity and computer science.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="glass-card">
+
+          <h3>M.S. Cybersecurity + Advanced Certificate in Cybersecurity</h3>
+
+          <p>
+            The State University of New York at Buffalo<br><br>
+            Buffalo, NY<br><br>
+            Aug 2024 – Dec 2025
+          </p>
+
+        </div>
+
+        <div class="glass-card">
+
+          <h3>Bachelor of Engineering in Computer Science</h3>
+
+          <p>
+            University of Mumbai<br><br>
+            Mumbai, India<br><br>
+            Aug 2019 – Jul 2023
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CERTIFICATIONS -->
+
+  <section id="certifications">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Certifications</h2>
+        <p>Industry-recognized cybersecurity certifications and credentials.</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="glass-card">
+          <h3>CompTIA CySA+</h3>
+          <p>Cybersecurity Analyst Certification — Sept 2025</p>
+        </div>
+
+        <div class="glass-card">
+          <h3>CompTIA Security+</h3>
+          <p>Security Operations & Infrastructure Security — Aug 2025</p>
+        </div>
+
+        <div class="glass-card">
+          <h3>CompTIA CSAP</h3>
+          <p>CompTIA Security Analytics Professional — Sept 2025</p>
+        </div>
+
+        <div class="glass-card">
+          <h3>AWS Academy Cloud Security Foundations</h3>
+          <p>Platinum Badge — May 2025</p>
+        </div>
+
+        <div class="glass-card">
+          <h3>Foundations of Cybersecurity</h3>
+          <p>Coursera — Jun 2021</p>
+        </div>
+
+        <div class="glass-card">
+          <h3>CCNA</h3>
+          <p>Currently In Progress</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>Let’s Connect</h2>
+
+        <p style="margin-top:20px; color:#cbd5e1; line-height:1.9;">
+          Open to cybersecurity, SOC analyst, cloud security,
+          threat intelligence, infrastructure security,
+          and DevSecOps opportunities across the United States.
+        </p>
+
+        <div class="contact-links">
+
+          <a href="mailto:farazahmedsec17@gmail.com">
+            Email Me
+          </a>
+
+          <a href="tel:+17165733902">
+            Call Me
+          </a>
+
+          <a href="https://linkedin.com/in/faraz-ahmed-5670931a7/" target="_blank">
+            LinkedIn
+          </a>
+
+          <a href="https://github.com/TrexterX17" target="_blank">
+            GitHub
+          </a>
+
+        </div>
+
+        <div style="margin-top:35px; color:#94a3b8;">
+          Jericho, NY • Open To Relocation
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+      © 2026 Faraz Ahmed • Cybersecurity Portfolio • All Rights Reserved
+    </div>
+
+  </footer>
 
 </body>
 </html>
