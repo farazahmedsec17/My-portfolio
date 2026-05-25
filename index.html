@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faraz Ahmed | Portfolio</title>
+    <!-- Google Fonts for Sophisticated Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --text-primary: #f5f5f7;
+            --text-secondary: #c5c6c7;
+            --accent-color: #66fcf1;
+            --accent-hover: #45a29e;
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 10%;
+            background: rgba(11, 12, 16, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            padding-top: 80px;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-text h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text h1 span {
+            font-style: italic;
+            color: var(--accent-color);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .location {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .location i {
+            color: var(--accent-color);
+        }
+
+        /* Profile Image Container */
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .image-wrapper {
+            width: 320px;
+            height: 400px;
+            border: 1px solid rgba(102, 252, 241, 0.3);
+            position: relative;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+        }
+
+        .image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--accent-color);
+            z-index: -1;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            filter: grayscale(20%);
+        }
+
+        .image-wrapper:hover {
+            transform: translate(-5px, -5px);
+        }
+
+        .image-wrapper:hover::before {
+            transform: translate(8px, 8px);
+        }
+
+        /* Buttons & CTA */
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(102, 252, 241, 0.1);
+            box-shadow: 0 4px 20px rgba(102, 252, 241, 0.15);
+        }
+
+        .btn-secondary {
+            color: var(--text-primary);
+            position: relative;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .btn-secondary::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 5px;
+            left: 0;
+            background-color: var(--text-primary);
+            transform: scaleX(0.3);
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-out;
+        }
+
+        .btn-secondary:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Contact / Footer Section */
+        footer {
+            padding: 4rem 10%;
+            background-color: #07080a;
+            border-top: 1px solid rgba(197, 198, 199, 0.05);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .contact-info-list {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item:hover {
+            color: var(--accent-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            .hero-image {
+                order: -1;
+            }
+            .location, .cta-buttons {
+                justify-content: center;
+            }
+            nav {
+                padding: 1.5rem 5%;
+            }
+            .nav-links {
+                display: none; /* Can be expanded to a burger menu if needed */
+            }
+            header {
+                padding: 0 5%;
+                padding-top: 120px;
+                padding-bottom: 50px;
+            }
+            footer {
+                padding: 3rem 5%;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .contact-info-list {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <nav>
+        <div class="logo">FA<span>.</span></div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Hero Section -->
+    <header id="about">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Hi, I'm Faraz Ahmed<span>.</span></h1>
+                <p class="tagline">A driven professional focused on building secure, efficient, and scalable digital environments. Welcome to my personal space.</p>
+                
+                <div class="location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Jericho, NY — Open to Relocation</span>
+                </div>
+
+                <div class="cta-buttons">
+                    <!-- RESUME DOWNLOAD: Replace 'your-resume.pdf' with the actual path to your file -->
+                    <a href="your-resume.pdf" download="Faraz_Ahmed_Resume" class="btn btn-primary">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <!-- PHOTOGRAPH EMBED: Replace 'your-photo.jpg' with your image file path -->
+                    <img src="your-photo.jpg" alt="Faraz Ahmed Profile Picture">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sophisticated Contact Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="contact-info-list">
+                <a href="mailto:farazahmedsec17@gmail.com" class="contact-item">
+                    <i class="fa-regular fa-envelope"></i> farazahmedsec17@gmail.com
+                </a>
+                <a href="tel:7165733902" class="contact-item">
+                    <i class="fa-solid fa-phone"></i> (716)-573-3902
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="http://linkedin.com/in/faraz-ahmed-5670931a7/" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="http://github.com/TrexterX17" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
